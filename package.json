@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "precommit": "lint-staged",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -44,5 +45,10 @@
     "*.{json,html}": [
       "prettier --write --ignore-unknown"
     ]
-  }
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "yarn precommit"
+    }
+}
 }
