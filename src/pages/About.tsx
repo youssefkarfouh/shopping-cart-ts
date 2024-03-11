@@ -1,7 +1,12 @@
 function About() {
+  const tes = "fd";
   return (
-    <div>About</div>
-  )
+    <div className='test'>
+      About
+      {'test' === 'test' && 'Hello'}
+      {tes}
+    </div>
+  );
 }
 
-export default About
+export default About;
